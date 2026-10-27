@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conexão 2027 — uma experiência de cartografia intuitiva. Escolha uma imagem e encontre um convite à reflexão, sem previsões.">
+  <meta name="theme-color" content="#102a2d">
+  <meta name="referrer" content="no-referrer">
+  <title>Conexão 2027 — Cartografia intuitiva</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="estilo.css">
+  <script src="experiencia.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#principal" data-i18n="skip">Pular para o conteúdo</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="wordmark"><span class="brand-star" aria-hidden="true">✧</span><span>Conexão <span class="brand-year">2027</span></span></div>
+      <div class="language-control">
+        <label for="idioma" data-i18n="language">Idioma</label>
+        <select id="idioma" aria-label="Idioma">
+          <option value="pt" lang="pt-BR">Português</option>
+          <option value="en" lang="en-US">English</option>
+          <option value="es" lang="es-419">Español</option>
+        </select>
+      </div>
+    </header>
+
+    <main id="principal" tabindex="-1">
+      <nav class="journey" aria-label="Etapas" id="journey">
+        <ol>
+          <li data-step="home" aria-current="step"><span aria-hidden="true">01</span><span data-i18n="stepHome">O convite</span></li>
+          <li data-step="guide"><span aria-hidden="true">02</span><span data-i18n="stepGuide">A pausa</span></li>
+          <li data-step="gallery"><span aria-hidden="true">03</span><span data-i18n="stepGallery">A escolha</span></li>
+          <li data-step="reading"><span aria-hidden="true">04</span><span data-i18n="stepReading">A reflexão</span></li>
+        </ol>
+      </nav>
+
+      <section id="home" class="screen home-screen" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">Uma experiência de cartografia intuitiva</p>
+          <h1 id="home-title" tabindex="-1">Conexão <span>2027</span></h1>
+          <p class="hero-line" data-i18n="heroLine">Uma imagem. Um encontro com você.</p>
+          <p class="intro" data-i18n="intro">Entre cores, formas e símbolos, um convite para observar o presente e pensar no novo ciclo. Escolha uma imagem e abra espaço para a sua própria reflexão.</p>
+          <button type="button" class="button primary" id="start"><span data-i18n="start">Começar experiência</span><span aria-hidden="true">↗</span></button>
+          <p class="small-note" data-i18n="homeNote">Sem previsões. Sem respostas prontas. No seu tempo.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="celestial-orbit"></div>
+          <img class="hero-card hero-card-left" src="imagens/03-a-janela.png" alt="" width="1024" height="1536" decoding="async">
+          <img class="hero-card hero-card-right" src="imagens/12-a-arvore.png" alt="" width="1024" height="1536" decoding="async">
+          <img class="hero-card hero-card-center" src="imagens/01-a-ponte.png" alt="" width="1024" height="1536" decoding="async" fetchpriority="high">
+          <span class="art-star" aria-hidden="true">✧</span>
+        </div>
+      </section>
+
+      <section id="guide" class="screen guide-screen" hidden aria-labelledby="guide-title">
+        <p class="eyebrow" data-i18n="guideEyebrow">Antes de escolher</p>
+        <h1 id="guide-title" tabindex="-1" data-i18n="guideTitle">Dê um instante ao seu olhar.</h1>
+        <p class="section-intro" data-i18n="guideIntro">Não é preciso explicar sua preferência. Observe as imagens com curiosidade e permita-se uma pausa.</p>
+        <ol class="guidance-list">
+          <li><span aria-hidden="true">01</span><div><h2 data-i18n="guideOneTitle">Não existe escolha certa ou errada.</h2><p data-i18n="guideOne">Você pode se aproximar da imagem que fizer sentido para você neste momento.</p></div></li>
+          <li><span aria-hidden="true">02</span><div><h2 data-i18n="guideTwoTitle">Deixe a atenção encontrar uma imagem.</h2><p data-i18n="guideTwo">Observe o conjunto e escolha a imagem que mais desperta sua atenção, sem precisar justificar.</p></div></li>
+          <li><span aria-hidden="true">03</span><div><h2 data-i18n="guideThreeTitle">Esta experiência não prevê o futuro.</h2><p data-i18n="guideThree">As imagens não revelam verdades ocultas nem prometem acontecimentos.</p></div></li>
+          <li><span aria-hidden="true">04</span><div><h2 data-i18n="guideFourTitle">A mensagem é um convite à reflexão.</h2><p data-i18n="guideFour">O significado nasce do seu olhar e da sua história. A experiência não substitui orientação profissional.</p></div></li>
+        </ol>
+        <div class="guide-actions"><button class="button primary" id="to-gallery" type="button"><span data-i18n="viewCards">Ver as 12 imagens</span><span aria-hidden="true">→</span></button><button class="button text-button restart" type="button" data-i18n="restart">Recomeçar</button></div>
+      </section>
+
+      <section id="gallery" class="screen gallery-screen" hidden aria-labelledby="gallery-title">
+        <div class="gallery-heading"><div><p class="eyebrow" data-i18n="galleryEyebrow">Um instante de atenção</p><h1 id="gallery-title" tabindex="-1" data-i18n="galleryTitle">Qual imagem encontra seu olhar?</h1></div><p class="gallery-description" data-i18n="galleryIntro">Observe sem pressa. Toque ou clique em uma imagem para abrir sua mensagem.</p></div>
+        <div class="gallery-tools"><label class="motion-option"><input type="checkbox" id="sem-animacao"><span data-i18n="noAnimation">Abrir a mensagem sem animação</span></label><button class="button text-button restart" type="button" data-i18n="restart">Recomeçar</button></div>
+        <ul id="cards" class="cards-grid" aria-label="Imagens para escolher"></ul>
+        <p class="gallery-bottom" data-i18n="galleryNote">Sua escolha é um ponto de partida, não uma resposta definitiva.</p>
+      </section>
+
+      <section id="reading" class="screen reading-screen" hidden aria-labelledby="reading-heading">
+        <div class="reading-layout">
+          <aside class="chosen-aside">
+            <h1 class="eyebrow" id="reading-heading" data-i18n="readingEyebrow">Sua imagem, sua reflexão</h1>
+            <figure class="chosen-figure"><img id="chosen-image" alt="" width="1024" height="1536"><figcaption id="chosen-caption"></figcaption></figure>
+            <p class="aside-note" data-i18n="readingIntro">Leia no seu tempo. A mensagem é um ponto de reflexão; o significado é construído por você.</p>
+            <div class="reading-actions"><button class="button primary" type="button" id="print" data-i18n="print">Imprimir ou salvar minha mensagem</button><button class="button secondary" type="button" id="choose-again" data-i18n="chooseAgain">Escolher outra carta</button><button class="button text-button restart" type="button" data-i18n="restart">Recomeçar</button></div>
+          </aside>
+          <div class="reading-main">
+            <p class="scroll-hint" id="scroll-hint" data-i18n="scrollHint">Role dentro da mensagem para ler todas as seções ↓</p>
+            <div class="flip-stage" id="flip-stage">
+              <div class="flip-inner" id="flip-inner">
+                <div class="flip-front" aria-hidden="true"><img id="flip-image" alt="" width="1024" height="1536"></div>
+                <div class="flip-back" id="flip-back" inert aria-hidden="true">
+                  <article id="message" tabindex="0" aria-labelledby="card-title" aria-describedby="scroll-hint"></article>
+                </div>
+              </div>
+            </div>
+            <p class="reading-end" data-i18n="readingEnd">Leve uma pergunta com você. Não é preciso encontrar todas as respostas agora.</p>
+          </div>
+        </div>
+      </section>
+      <noscript><p class="noscript-note">Ative o JavaScript do navegador para escolher uma carta e ler as mensagens. / Enable JavaScript to choose a card and read its message. / Activa JavaScript para elegir una carta y leer su mensaje.</p></noscript>
+      <p id="status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    </main>
+    <footer class="site-footer"><span>Conexão 2027</span><p data-i18n="footer">Um espaço de reflexão. Sem previsões, sem coleta de dados pessoais.</p><span class="footer-star" aria-hidden="true">✧</span></footer>
+  </div>
+</body>
+</html>
