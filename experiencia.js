@@ -570,7 +570,7 @@ const DESCRICOES = {
 // INTERFACE: toda nova chave precisa existir nos três idiomas.
 const INTERFACE = {
   pt: {
-    htmlLang:'pt-BR',pageTitle:'Conexão 2027 — Cartografia intuitiva',
+    htmlLang:'pt-BR',brandPrefix:'Conexão',brandName:'Conexão 2027',pageTitle:'Conexão 2027 — Cartografia intuitiva',
     description:'Conexão 2027 — escolha uma imagem e encontre um convite à reflexão, sem previsões.',
     skip:'Pular para o conteúdo',language:'Idioma',steps:'Etapas',stepHome:'O convite',stepGuide:'A pausa',stepGallery:'A escolha',stepReading:'A reflexão',
     eyebrow:'Uma experiência de cartografia intuitiva',heroLine:'Uma imagem. Um encontro com você.',intro:'Entre cores, formas e símbolos, um convite para observar o presente e pensar no novo ciclo. Escolha uma imagem e abra espaço para a sua própria reflexão.',start:'Começar experiência',homeNote:'Sem previsões. Sem respostas prontas. No seu tempo.',
@@ -581,7 +581,7 @@ const INTERFACE = {
     footer:'Um espaço de reflexão. Sem previsões, sem coleta de dados pessoais.',keywords:'Palavras-chave',main:'Mensagem principal',question:'Pergunta reflexiva',exercise:'Exercício prático',perception:'Percepção e escolha intuitiva',sentence:'Frase para guardar',card:'Carta',opened:'Mensagem aberta',changed:'Idioma atualizado',imageError:'Não foi possível carregar uma imagem. Confira a pasta imagens.'
   },
   en: {
-    htmlLang:'en-US',pageTitle:'Conexão 2027 — Intuitive mapping',description:'Conexão 2027 — choose an image and find an invitation to reflect, without predictions.',
+    htmlLang:'en-US',brandPrefix:'Connection',brandName:'Connection 2027',pageTitle:'Connection 2027 — Intuitive mapping',description:'Connection 2027 — choose an image and find an invitation to reflect, without predictions.',
     skip:'Skip to content',language:'Language',steps:'Steps',stepHome:'The invitation',stepGuide:'The pause',stepGallery:'The choice',stepReading:'The reflection',
     eyebrow:'An intuitive mapping experience',heroLine:'An image. A moment with yourself.',intro:'Through colors, shapes, and symbols, an invitation to notice the present and reflect on a new chapter. Choose an image and make room for your own reflection.',start:'Begin the experience',homeNote:'No predictions. No ready-made answers. At your own pace.',
     guideEyebrow:'Before you choose',guideTitle:'Give your eyes a moment.',guideIntro:'You do not need to explain your preference. Explore the images with curiosity and allow yourself a pause.',
@@ -591,7 +591,7 @@ const INTERFACE = {
     footer:'A space for reflection. No predictions or personal data collection.',keywords:'Keywords',main:'Main message',question:'Reflection question',exercise:'Practical exercise',perception:'Perception and intuitive choice',sentence:'A sentence to keep',card:'Card',opened:'Message opened',changed:'Language updated',imageError:'An image could not be loaded. Check the imagens folder.'
   },
   es: {
-    htmlLang:'es-419',pageTitle:'Conexão 2027 — Cartografía intuitiva',description:'Conexão 2027 — elige una imagen y encuentra una invitación a reflexionar, sin predicciones.',
+    htmlLang:'es-419',brandPrefix:'Conexión',brandName:'Conexión 2027',pageTitle:'Conexión 2027 — Cartografía intuitiva',description:'Conexión 2027 — elige una imagen y encuentra una invitación a reflexionar, sin predicciones.',
     skip:'Saltar al contenido',language:'Idioma',steps:'Etapas',stepHome:'La invitación',stepGuide:'La pausa',stepGallery:'La elección',stepReading:'La reflexión',
     eyebrow:'Una experiencia de cartografía intuitiva',heroLine:'Una imagen. Un encuentro contigo.',intro:'Entre colores, formas y símbolos, una invitación a observar el presente y pensar en un nuevo ciclo. Elige una imagen y abre espacio para tu propia reflexión.',start:'Comenzar la experiencia',homeNote:'Sin predicciones. Sin respuestas prefabricadas. A tu ritmo.',
     guideEyebrow:'Antes de elegir',guideTitle:'Dale un instante a tu mirada.',guideIntro:'No necesitas explicar tu preferencia. Observa las imágenes con curiosidad y permítete una pausa.',
@@ -687,7 +687,7 @@ function renderizarMensagem() {
   const artigo = $('message');
   artigo.replaceChildren();
   artigo.lang = ui.htmlLang;
-  artigo.append(criar('p','card-kicker', 'Conexão 2027 · ' + ui.card + ' ' + carta.id));
+    artigo.append(criar('p','card-kicker', ui.brandName + ' · ' + ui.card + ' ' + carta.id));
   const titulo = criar('h2','card-title',texto.title);
   titulo.id = 'card-title';
   titulo.tabIndex = -1;
